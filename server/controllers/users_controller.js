@@ -18,7 +18,8 @@ exports.getAllUsers = async (req, res) => {
 };
 
 exports.createUsers = async (req, res) => {
-  const { name, position, officeNo, mobileNo, smsNo, email } = req.body;
+  const { name, position, officeNo, mobileNo, smsNo, email, imageUrl } =
+    req.body;
   const newUser = UserModel({
     name,
     position,
@@ -26,6 +27,7 @@ exports.createUsers = async (req, res) => {
     mobileNo,
     smsNo,
     email,
+    imageUrl,
   });
   await newUser.save();
   return res.status(200).json({

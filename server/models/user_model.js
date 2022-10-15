@@ -9,6 +9,7 @@ const UserSchema = new Schema({
   mobileNo: String,
   smsNo: String,
   email: String,
+  imageUrl: String,
 });
 
 const UserModel = mongoose.model("User", UserSchema);

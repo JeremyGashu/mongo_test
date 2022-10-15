@@ -24,4 +24,5 @@ exports.userSchema = Joi.object().keys({
   mobileNo: Joi.string().required(),
   smsNo: Joi.string().required(),
   email: Joi.string().email().required(),
+  imageUrl: Joi.string().required(),
 });
